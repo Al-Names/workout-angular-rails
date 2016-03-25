@@ -1,0 +1,16 @@
+<h1>Home Test</h1>
+
+  <div ng-repeat="workout in workouts">
+    <ul>
+      <li>{{ workout.title }}</li>
+    </ul>
+  </div>
+
+  <form ng-submit="addWorkout()">
+    <input type="text" ng-model="title" />
+    <button type="submit">Post</button>
+  </form>
+
+<!--   <div ng-repeat="workout in workouts">
+    {{workout.title}}
+  </div> -->
