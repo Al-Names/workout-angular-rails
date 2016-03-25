@@ -1,8 +1,9 @@
-<h1>Home Test</h1>
+<h3>Home Test</h3>
 
   <div ng-repeat="workout in workouts">
     <ul>
-      <li>{{ workout.title }}</li>
+      <li><div ng-show="workout.title">{{ workout.title }}</div>
+      <button ng-click="destroy(workout)">Delete</button></li>
     </ul>
   </div>
 

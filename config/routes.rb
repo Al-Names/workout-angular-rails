@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   root to: 'application#home'
+
+  resources :workouts, only: [:create, :index, :show, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

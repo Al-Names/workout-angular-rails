@@ -2,10 +2,14 @@
   
   $scope.workouts = workouts.workouts;
 
+  $scope.destroy = function(workout) {
+      workouts.destroy(workout);
+  };
+
   $scope.addWorkout = function() {
     if(!$scope.title || $scope.title === '') { return; }
 
-    $scope.workouts.push({
+    workouts.create({
       title: $scope.title
     });
     $scope.title = '';

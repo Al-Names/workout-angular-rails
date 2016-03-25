@@ -8,8 +8,13 @@ angular
         .state('home', {
           url: '/home',
           templateUrl: 'home/_home.html',
-          controller: 'MainCtrl'
+          controller: 'MainCtrl',
+          resolve: {
+            workoutPromise: ['workouts', function(workouts){
+              return workouts.getAll();
+            }]
+          }
         });
 
-      $urlRouterProvider.otherwise('/home');
+      $urlRouterProvider.otherwise('workouts');
     }])
