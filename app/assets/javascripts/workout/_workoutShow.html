@@ -1,0 +1,5 @@
+<h1>Show page</h1>
+
+<div ng-repeat="workout in workouts | filter: {id: id}">
+  {{ workout.title }}
+</div>
