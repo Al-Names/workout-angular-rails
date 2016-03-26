@@ -1,5 +1,5 @@
-<h1>Show page</h1>
+<h4>Show page</h4>
 
 <div ng-repeat="workout in workouts | filter: {id: id}">
-  {{ workout.title }}
+  {{ workout.title }} - {{ workout.category }} - {{workout.exercise}}
 </div>
