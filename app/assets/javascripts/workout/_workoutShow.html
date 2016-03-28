@@ -1,5 +1,34 @@
-<h4>Show page</h4>
 
 <div ng-repeat="workout in workouts | filter: {id: id}">
-  {{ workout.title }} - {{ workout.category }} - {{workout.exercise}}
+  <h4 class="center">{{ workout.title }}</h4>
+  <h6 class="center">Category - {{workout.category}}</h6><br>
 </div>
+
+      <table ng-repeat="workout in workouts | filter: {id: id}" class="centered responsive-table">
+        <thead>
+          <tr>
+              <th ng-model="exercise">Exercise</th>
+              <th ng-model="sets">Sets</th>
+              <th ng-model="reps">Reps</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>{{workout.exercise}}</td>
+            <td>{{workout.sets}}</td>
+            <td>{{workout.reps}}</td>
+<!--             <td><button class="button" value="Add another line" onclick="addField();"></button></td> -->
+          </tr>
+<!--           <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+          </tr> -->
+        </tbody>
+      </table>

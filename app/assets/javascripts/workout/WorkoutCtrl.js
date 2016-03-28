@@ -8,6 +8,10 @@
       workouts.destroy(workout);
   };
 
+  // $scope.addExercise = function(input) {
+  //   $scope.workouts.push( '' );
+  // }; 
+
   $scope.addWorkout = function() {
     if(!$scope.title || $scope.title === '') { return; }
 
@@ -24,8 +28,26 @@
     $scope.sets = '';
     $scope.reps = '';
   };
-}
+
+// $scope.addExercise = function() {
+//   var newItemNo = $scope.workouts.length+1;
+//   $scope.workouts.push({'id':'exercise'+newItemNo});
+// };
+
+};
 
 angular 
   .module('app')
   .controller('WorkoutCtrl', WorkoutCtrl);
+
+
+
+
+
+
+
+
+
+
+
+
