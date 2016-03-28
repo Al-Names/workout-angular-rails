@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160326152525) do
+ActiveRecord::Schema.define(version: 20160328174419) do
 
   create_table "workouts", force: :cascade do |t|
     t.string   "title"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20160326152525) do
     t.string   "exercise"
     t.string   "sets"
     t.string   "reps"
+    t.integer  "upvotes"
+    t.integer  "downvotes"
   end
 
 end
