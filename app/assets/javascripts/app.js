@@ -42,29 +42,34 @@ angular
               return workouts.getAll();
             }]
           }
-        })
-
-        .state('categories', {
-          url: '/categories',
-          templateUrl: 'category/_category.html',
-          controller: 'CategoryCtrl',
-          resolve: {
-            categoryPromise: ['categories', function(categories){
-              return categories.getAll();
-            }]
-          }
-        })
-
-        .state('categories.show', {
-          url: '/{id}',
-          templateUrl: 'category/_categoryShow.html',
-          controller: 'CategoryCtrl',
-          resolve: {
-            categoryPromise: ['categories', function(categories){
-              return categories.getAll();
-            }]
-          }
+          // resolve: {
+          //   categoryPromise: ['categories', function(categories){
+          //     return categories.getAll();
+          //   }]
+          // }
         });
+
+        // .state('categories', {
+        //   url: '/categories',
+        //   templateUrl: 'category/_category.html',
+        //   controller: 'CategoryCtrl',
+        //   resolve: {
+        //     categoryPromise: ['categories', function(categories){
+        //       return categories.getAll();
+        //     }]
+        //   }
+        // })
+
+        // .state('categories.show', {
+        //   url: '/{id}',
+        //   templateUrl: 'category/_categoryShow.html',
+        //   controller: 'CategoryCtrl',
+        //   resolve: {
+        //     categoryPromise: ['categories', function(categories){
+        //       return categories.getAll();
+        //     }]
+        //   }
+        // });
 
       $urlRouterProvider.otherwise('home');
     }])

@@ -11,24 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160328185744) do
-
-  create_table "categories", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20160329135055) do
 
   create_table "workouts", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "category"
     t.string   "exercise"
     t.string   "sets"
     t.string   "reps"
     t.integer  "upvotes"
     t.integer  "downvotes"
+    t.string   "category"
   end
 
 end

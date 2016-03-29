@@ -1,7 +1,8 @@
 class WorkoutsController < ApplicationController
 
   def index
-    respond_with Workout.all 
+    respond_with Workout.all
+    # respond_with Category.find(params[:id]) 
   end
 
   def create 
@@ -10,6 +11,7 @@ class WorkoutsController < ApplicationController
 
   def show
     respond_with Workout.find(params[:id])
+    # respond_with Category.find(params[:id])
   end
 
   def upvote
@@ -31,7 +33,7 @@ class WorkoutsController < ApplicationController
   private 
 
   def workout_params
-    params.require(:workout).permit(:title, :category, :exercise, :sets, :reps)
+    params.require(:workout).permit(:title, :exercise, :sets, :reps, :category)
   end
 
 

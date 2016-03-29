@@ -22,6 +22,10 @@ angular.module('app')
     });
   };
 
+  o.addCategory = function(id, category) {
+    return $http.post('/categories/' + id + '/categories.json', category);
+  };
+
   // o.upvote = function(category) {
   //   return $http.put('/categories/' + category.id + '/upvote.json')
   //     .success(function(data){

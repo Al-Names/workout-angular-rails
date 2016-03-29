@@ -12,6 +12,16 @@
   //   $scope.workouts.push( '' );
   // }; 
 
+  $scope.categories = [ 
+    {"name" :"Arms"},
+    {"name" :"Back"},
+    {"name" :"Chest"},
+    {"name" :"Legs"},
+    {"name" :"Chest & Back"},
+    {"name" :"Cardio"},
+    {"name" :"Abs"}
+  ];
+
   $scope.incrementUpvotes = function(workout) {
     workouts.upvote(workout);
   };
@@ -31,7 +41,7 @@
       reps: $scope.reps
     });
     $scope.title = '';
-    $scope.category = '';
+    // $scope.category = '';
     $scope.exercise = '';
     $scope.sets = '';
     $scope.reps = '';
