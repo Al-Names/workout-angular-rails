@@ -1,5 +1,6 @@
-- Upvote / downvote
+- Need to assign a Workout to a User
 
 - Comments
 
-- Creat User
+- Change placeholder color
+
