@@ -2,15 +2,19 @@
   
   $scope.workouts = workouts.workouts;
 
+  // $scope.workouts = [{
+  //   title: '',
+  //   category: '',
+  //   exercise: '',
+  //   sets: '',
+  //   reps: ''
+  // }];
+
   $scope.id = $state.params.id;
 
   $scope.destroy = function(workout) {
       workouts.destroy(workout);
   };
-
-  // $scope.addExercise = function(input) {
-  //   $scope.workouts.push( '' );
-  // }; 
 
   $scope.categories = [ 
     {"name" :"Arms"},
@@ -45,6 +49,11 @@
     $scope.sets = '';
     $scope.reps = '';
   };
+
+  // $scope.addExercise = function($event) {
+  //   $scope.workouts.push({exercise: ''});
+  //   $event.preventDefault();
+  // }; 
 
 // $scope.addExercise = function() {
 //   var newItemNo = $scope.workouts.length+1;
