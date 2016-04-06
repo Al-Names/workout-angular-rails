@@ -42,15 +42,17 @@
     $scope.reps = '';
   };
 
-  $scope.addExercise = function () {
-    $scope.workouts.push({exercise: ''});
-  };
+  // $scope.addExercise = function () {
+  //   var el = $compile("<add-exercise></add-exercise>")($scope);
+  //   $element.parent().append(el);
+  // };
 
 }
 
 angular 
   .module('app')
   .controller('WorkoutCtrl', WorkoutCtrl);
+
 
 
 
