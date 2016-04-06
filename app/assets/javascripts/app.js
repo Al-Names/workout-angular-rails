@@ -1,5 +1,10 @@
 angular
   .module('app', ['ui.router', 'templates', 'Devise'])
+  // .directive('addExercise', function() {
+  //   return {
+  //     template: '<input placeholder="Exercise" name="exercise" ng-model="exercise" type="text" class="validate" required="required">'
+  //   };
+  // })
   .config([
     '$stateProvider',
     '$urlRouterProvider',
@@ -9,6 +14,12 @@ angular
           url: '/home',
           templateUrl: 'home/_home.html',
           controller: 'MainCtrl'
+        })
+
+        .state('home.favorites', {
+          url: '/favorites',
+          templateUrl: 'favorites/_home.html',
+          controller: 'FavoriteCtrl'
         })
 
         .state('workouts', {
