@@ -42,10 +42,9 @@
     $scope.reps = '';
   };
 
-  // $scope.addExercise = function () {
-  //   workouts.create({exercise: $scope.exercise});
-  //   $scope.exercise = '';
-  // };
+  $scope.addExercise = function () {
+    $scope.workouts.push({exercise: ''});
+  };
 
 }
 

@@ -1,10 +1,8 @@
 <div ng-include="'nav/_workoutNewNav.html'"></div>
 
-<button type="button" ng-click="template='form1'">Add Field</button>
-<!-- <button type="button" ng-click="myFunction()">Click Me!</button> -->
+<!-- <button type="button" ng-click="template='form1'">Add Field</button> -->
   <form ng-submit='addWorkout()' class="col s12" name="form">
   <!-- <button type="button" ng-click="addExercise()">Add Exercise</button> -->
-<!--   <button ng-click="addNewChoice()">Add Choice</button> -->
     <div class="row">
       <div class="input col s6">
       <div ng-if="form.title.$touched" class="error">
@@ -15,14 +13,14 @@
         <input placeholder="Title" name="title" ng-model="title" type="text" class="validate" required="required">
       </div>
     </div>
-    <div class="row">
+   <!--  <div class="row">
       <select ng-model="category" class="browser-default col m6" name="category" required="required">
           <option value="" disabled="disabled" selected="selected">Choose Category</option>
           <option ng-repeat="category in categories" value="{{category.name}}">{{category.name}}</option>
       </select>
-    </div>
+    </div> -->
 
-    <div class="row">
+<!--     <div class="row">
       <div class="input col s12">
         <div ng-if="form.exercise.$touched" class="error">
           <div ng-if="form.exercise.$error.required">
@@ -30,12 +28,9 @@
           </div>
         </div>
         <input placeholder="Exercise" name="exercise" ng-model="exercise" type="text" class="validate" required="required">
-        <!-- <div>
-          <ng-include src="template"></ng-include>
-        </div> -->
       </div>
-    </div>
-
+    </div> -->
+<!-- 
     <div class="row">
       <div class="input col s12">
       <div ng-if="form.sets.$touched" class="error">
@@ -55,7 +50,13 @@
         </div>
         <input placeholder="Reps" ng-model="reps" name="reps" type="text" class="validate" required="required">
       </div>
+    </div> -->
+
+    <div class="row" ng-repeat="workout in workouts track by $index">
+      <add-exercise></add-exercise>
+      <button type="button" ng-click="add-exercise">Click Me</button>
     </div>
+
 
    <!--  <div>
       <ng-include src="template"></ng-include>
