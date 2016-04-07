@@ -1,3 +1,5 @@
+ // var WORKOUTS_PER_PAGE = 3;
+
  function WorkoutCtrl($scope, $state, $stateParams, workouts) {
   
   $scope.workouts = workouts.workouts;
@@ -101,6 +103,26 @@
       $scope.toggle5 = function() {
           $scope.ex5 = !$scope.ex5;
     };
+
+  // $scope.page = 0;
+  // $scope.totalWorkouts = workouts.length;
+  // $scope.totalPages = Math.ceil($scope.totalWorkouts / WORKOUTS_PER_PAGE);
+
+  // $scope.paginateWorkouts = function () {
+  //   $scope.workouts = $scope.workouts.slice($scope.page * WORKOUTS_PER_PAGE, ($scope.page + 1) * WORKOUTS_PER_PAGE);
+  // };
+
+  // $scope.nextPage = function () {
+  //   $scope.page++;
+  //   $scope.paginateWorkouts();
+  // };
+
+  // $scope.previousPage = function () {
+  //   $scope.page--;
+  //   $scope.paginateWorkouts();
+  // };
+
+  // $scope.paginateWorkouts();
 
 //   $scope.addExercise = function () {
 //     $scope.workouts.push({
