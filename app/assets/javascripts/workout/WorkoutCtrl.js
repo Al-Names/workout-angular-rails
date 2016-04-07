@@ -104,6 +104,16 @@
           $scope.ex5 = !$scope.ex5;
     };
 
+    $scope.currentPage = 0;
+    $scope.pageSize = 1;
+    $scope.data = [];
+    $scope.numberOfPages=function(){
+        return Math.ceil($scope.data.length/$scope.pageSize);                
+    }
+    for (var i=0; i<4; i++) {
+        $scope.data.push("Item "+i);
+    }
+
   // $scope.page = 0;
   // $scope.totalWorkouts = workouts.length;
   // $scope.totalPages = Math.ceil($scope.totalWorkouts / WORKOUTS_PER_PAGE);
