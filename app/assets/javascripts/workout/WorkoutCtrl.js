@@ -20,11 +20,6 @@
     {"name" :"Shoulders"}
   ];
 
-  // $scope.exercise = [
-  //   {"name" :"Curls"}
-  //   // {"name" :""}
-  // ];
-
   $scope.incrementUpvotes = function(workout) {
     workouts.upvote(workout);
   };
@@ -79,69 +74,46 @@
     // $scope.exercise4: '';
   };
 
-    $scope.ex1 = false;
-      $scope.toggle1 = function() {
-          $scope.ex1 = !$scope.ex1;
-    };
+  $scope.update = function(workout) {
+    console.log(workout);
+    workouts.update(workout);
+  };
 
-    $scope.ex2 = false;
-      $scope.toggle2 = function() {
-          $scope.ex2 = !$scope.ex2;
-    };
+  $scope.ex1 = false;
+    $scope.toggle1 = function() {
+        $scope.ex1 = !$scope.ex1;
+  };
 
-    $scope.ex3 = false;
-      $scope.toggle3 = function() {
-          $scope.ex3 = !$scope.ex3;
-    };
+  $scope.ex2 = false;
+    $scope.toggle2 = function() {
+        $scope.ex2 = !$scope.ex2;
+  };
 
-    $scope.ex4 = false;
-      $scope.toggle4 = function() {
-          $scope.ex4 = !$scope.ex4;
-    };
+  $scope.ex3 = false;
+    $scope.toggle3 = function() {
+        $scope.ex3 = !$scope.ex3;
+  };
 
-    $scope.ex5 = false;
-      $scope.toggle5 = function() {
-          $scope.ex5 = !$scope.ex5;
-    };
+  $scope.ex4 = false;
+    $scope.toggle4 = function() {
+        $scope.ex4 = !$scope.ex4;
+  };
 
-    $scope.currentPage = 0;
-    $scope.pageSize = 1;
-    $scope.data = [];
-    $scope.numberOfPages=function(){
-        return Math.ceil($scope.data.length/$scope.pageSize);                
-    }
-    for (var i=0; i<4; i++) {
-        $scope.data.push("Item "+i);
-    }
+  $scope.ex5 = false;
+    $scope.toggle5 = function() {
+        $scope.ex5 = !$scope.ex5;
+  };
 
-  // $scope.page = 0;
-  // $scope.totalWorkouts = workouts.length;
-  // $scope.totalPages = Math.ceil($scope.totalWorkouts / WORKOUTS_PER_PAGE);
+  $scope.currentPage = 0;
+  $scope.pageSize = 2;
+  $scope.data = [];
+  $scope.numberOfPages=function(){
+      return Math.ceil($scope.data.length/$scope.pageSize);                
+  }
+  for (var i=0; i<4; i++) {
+      $scope.data.push("Item "+i);
+  }
 
-  // $scope.paginateWorkouts = function () {
-  //   $scope.workouts = $scope.workouts.slice($scope.page * WORKOUTS_PER_PAGE, ($scope.page + 1) * WORKOUTS_PER_PAGE);
-  // };
-
-  // $scope.nextPage = function () {
-  //   $scope.page++;
-  //   $scope.paginateWorkouts();
-  // };
-
-  // $scope.previousPage = function () {
-  //   $scope.page--;
-  //   $scope.paginateWorkouts();
-  // };
-
-  // $scope.paginateWorkouts();
-
-//   $scope.addExercise = function () {
-//     $scope.workouts.push({
-//       exercise: '',
-//       exercisePlaceholder: 'exerciseeeeee',
-//       text: ''
-//     });
-
-//   };  
 
 }
 

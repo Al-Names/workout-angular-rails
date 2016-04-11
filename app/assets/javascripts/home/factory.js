@@ -1,5 +1,5 @@
 angular.module('app')
-.factory('workouts', ['$http', function($http){
+.factory('workouts', ['$http', '$stateParams', function($http, $stateParams){
   var o = {
     workouts: []
   };
@@ -13,6 +13,14 @@ angular.module('app')
   o.create = function(workout) {
     return $http.post('/workouts.json', workout).success(function(data){
       o.workouts.push(data);
+    });
+  };
+
+  o.update = function(workout) {
+    // console.log(workout);
+
+    return $http.put('/workouts/' + workout.id + '.json', workout).then(function(response){
+      return response.data;
     });
   };
 

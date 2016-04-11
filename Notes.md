@@ -14,4 +14,5 @@
 
 - Add Pagination
 
+- Need to create an o.update / o.edit in the factory.js file
 

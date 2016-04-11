@@ -34,6 +34,16 @@
     <button ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">
         Next
     </button> -->
+   <!--  <div>
+     <p ng-click="editable = 'title'" ng-hide="editable == 'title'" ng-repeat="workout in workouts">{{workout.title}}</p>
+        <span ng-show="editable == 'title'">
+            <form>
+                <input type="text" size="30" name="title" ng:required ng-model="workout.title">
+                <button ng-click="save(); editable = ''">Ok</button>
+                <button ng-click="editable()l = ''">Cancel</button>
+            </form>
+        </span>
+      </div> -->
 
     <div>
       <table class="centered col s12 m6 l6">
@@ -42,14 +52,22 @@
               <th ng-model="title">Title</th> 
               <th ng-model="category">Category</th>
               <th ng-model="user">User</th>
+              <th>Action</th>
           </tr>
         </thead>
 
         <tbody ng-repeat="workout in workouts | startFrom:currentPage*pageSize | limitTo:pageSize">
           <tr>
-            <td><a ui-sref="workouts.show({ id: workout.id })">{{workout.title}}</a><a ng-click="destroy(workout)"><i class="material-icons">delete</i></a></td>
+            <!-- <td><a href="#" onaftersave="saveWorkout()" editable-text="workout.title">{{workout.title}}</a></td> -->
+            <td><a ui-sref="edit({ id: workout.id })">{{workout.title}}</a>
+            <!-- <td><a href="#" editable-text="workout.title" onbeforesave="updateWorkout($data)">{{workout.title || 'empty'}}</a></td> -->
+            <!-- <td><a ui-sref="workouts.show({ id: workout.id })">{{workout.title}}</a><a ng-click="destroy(workout)"><i class="material-icons">delete</i></a></td> -->
             <td>{{workout.category}}</td>
             <td>Created by: {{workout.user.username | uppercase }}</td>
+           <!--  <td>
+                <button ng-hide="editingData[workout.id]" ng-click="modify(workout)">Modify</button>
+                <button ng-show="editingData[workout.id]" ng-click="update(workout)">Update</button>
+            </td> -->
           </tr>
         </tbody>
       </table>

@@ -7,13 +7,16 @@ class WorkoutsController < ApplicationController
 
   def create 
     respond_with Workout.create(workout_params.merge(user_id: current_user.id))
-
-    respond_with root_path
   end
 
   def show
     respond_with Workout.find(params[:id])
-    # respond_with Category.find(params[:id])
+  end
+
+  def update
+    workout = Workout.find(params[:id])
+    workout.update(workout_params)
+    respond_with workout
   end
 
   def upvote
