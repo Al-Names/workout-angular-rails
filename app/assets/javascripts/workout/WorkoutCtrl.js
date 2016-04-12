@@ -105,12 +105,12 @@
   };
 
   $scope.currentPage = 0;
-  $scope.pageSize = 2;
+  $scope.pageSize = 3;
   $scope.data = [];
   $scope.numberOfPages=function(){
       return Math.ceil($scope.data.length/$scope.pageSize);                
   }
-  for (var i=0; i<4; i++) {
+  for (var i=0; i<50; i++) {
       $scope.data.push("Item "+i);
   }
 

@@ -2,7 +2,6 @@ class WorkoutsController < ApplicationController
 
   def index
     respond_with Workout.all
-    # respond_with Category.find(params[:id]) 
   end
 
   def create 
@@ -15,8 +14,10 @@ class WorkoutsController < ApplicationController
 
   def update
     workout = Workout.find(params[:id])
-    workout.update(workout_params)
-    respond_with workout
+    if workout.user_id == current_user.id
+      workout.update(workout_params)
+      respond_with workout
+    end
   end
 
   def upvote
@@ -32,7 +33,10 @@ class WorkoutsController < ApplicationController
   end
 
   def destroy
-    respond_with Workout.find(params[:id]).destroy
+    workout = Workout.find(params[:id])
+    if workout.user_id == current_user.id
+      respond_with workout.destroy
+    end
   end
 
   private 
