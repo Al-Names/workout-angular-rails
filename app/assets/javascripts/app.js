@@ -3,11 +3,6 @@ angular
   .directive('addExercise', function() {
     return {
       templateUrl: 'workout/_workoutForm.html'
-      // link: function($scope, element, attrs) {
-      //   $scope.clickMe = function() {
-      //     $scope.workouts.push("hello");
-      //   }
-      // }
     }
   })
   .filter('startFrom', function() {
@@ -28,11 +23,11 @@ angular
           controller: 'MainCtrl'
         })
 
-        .state('home.favorites', {
-          url: '/favorites',
-          templateUrl: 'favorites/_home.html',
-          controller: 'FavoriteCtrl'
-        })
+        // .state('home.favorites', {
+        //   url: '/favorites',
+        //   templateUrl: 'favorites/_home.html',
+        //   controller: 'FavoriteCtrl'
+        // })
 
         .state('workouts', {
           url: '/workouts',

@@ -105,14 +105,19 @@
   };
 
   $scope.currentPage = 0;
-  $scope.pageSize = 3;
+  $scope.pageSize = 10;
   $scope.data = [];
   $scope.numberOfPages=function(){
       return Math.ceil($scope.data.length/$scope.pageSize);                
   }
-  for (var i=0; i<50; i++) {
+  for (var i=0; i<5; i++) {
       $scope.data.push("Item "+i);
   }
+
+  $scope.sort = function(keyname){
+        $scope.sortKey = keyname;   //set the sortKey to the param passed
+        $scope.reverse = !$scope.reverse; //if true make it false and vice versa
+    }
 
 
 }
