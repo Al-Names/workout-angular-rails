@@ -13,6 +13,7 @@
 //= require angular
 //= require angular-devise
 //= require angular-rails-templates
+//= require jQuery
 
 //= require angular-ui-router
 //= require_tree .

@@ -94,7 +94,7 @@ angular
             })
           }]
         })
-        
+
         .state('register', {
           url: '/register',
           templateUrl: 'auth/_register.html',
@@ -108,10 +108,3 @@ angular
 
       $urlRouterProvider.otherwise('home');
     }])
-
-
-
-
-
-
-
