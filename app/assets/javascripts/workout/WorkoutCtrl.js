@@ -1,6 +1,4 @@
- // var WORKOUTS_PER_PAGE = 3;
-
- function WorkoutCtrl($scope, $state, $stateParams, workouts, $templateCache) {
+ function WorkoutCtrl($scope, $state, $stateParams, workouts) {
 
   $scope.workouts = workouts.workouts;
 
