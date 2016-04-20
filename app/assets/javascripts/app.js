@@ -1,10 +1,12 @@
 angular
   .module('app', ['ui.router', 'templates', 'Devise'])
+
   .directive('addExercise', function() {
     return {
       templateUrl: 'workout/_workoutForm.html'
     }
   })
+
   .filter('startFrom', function() {
     return function(input, start) {
         start = +start;

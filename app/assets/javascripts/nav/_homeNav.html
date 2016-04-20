@@ -1,6 +1,6 @@
   <nav id="homeNav" style="height: 90px">
     <div class="nav-wrapper" ng-controller="NavCtrl">
-      <h1 class="brand-logo center" ng-show="signedIn()" id="nav-text">Welcome, {{ user.username | uppercase }}</h1>
+      <a class="brand-logo center" ng-show="signedIn()" id="nav-text">Welcome, {{ user.username | uppercase }}</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="#/home">Home</a>
 <!--         <li><a href="#/workouts">Workouts</a></li> -->
