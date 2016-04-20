@@ -48,10 +48,10 @@
       // rep3: $scope.rep3,
       // rep4: $scope.rep4
     });
-    // $scope.title = '';
-    // $scope.exercise = '';
-    // $scope.sets = '';
-    // $scope.reps = '';
+    $scope.title = '';
+    $scope.exercise = '';
+    $scope.sets = '';
+    $scope.reps = '';
     // $scope.exercise1 = '';
     // $scope.exercise2 = '';
     // $scope.exercise3 = '';
@@ -64,7 +64,6 @@
     // $scope.rep2 = '';
     // $scope.rep3 = '';
     // $scope.rep4 = '';
-    debugger;
   };
 
   $scope.update = function(workout) {
