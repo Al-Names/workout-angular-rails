@@ -1,6 +1,7 @@
  function WorkoutCtrl($scope, $state, $stateParams, workouts) {
 
-  $scope.workouts = workouts.workouts;
+  $scope.workouts = workouts.workouts; // This binds the workouts variable in our controller to
+                                      // the workouts array in our factory
 
   $scope.id = $state.params.id;
 
