@@ -75,16 +75,16 @@ angular
           }
         })
 
-        .state('addExercise', {
-          url: '/{id}/add',
-          templateUrl: 'workout/_workoutAddExercise.html',
-          controller: 'WorkoutCtrl',
-          resolve: {
-            workoutPromise: ['workouts', function(workouts){
-              return workouts.getAll();
-            }]
-          }
-        })
+        // .state('addExercise', {
+        //   url: '/{id}/add',
+        //   templateUrl: 'workout/_workoutAddExercise.html',
+        //   controller: 'WorkoutCtrl',
+        //   resolve: {
+        //     workoutPromise: ['workouts', function(workouts){
+        //       return workouts.getAll();
+        //     }]
+        //   }
+        // })
 
         .state('login', {
           url: '/login',

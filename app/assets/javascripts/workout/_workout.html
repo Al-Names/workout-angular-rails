@@ -28,7 +28,7 @@
                 <span ng-show="sortKey=='category'"></span>
               </th>
               <th ng-model="user">User</th>
-              <th>Action</th>
+              <!-- <th>Action</th> -->
           </tr>
         </thead>
 
@@ -37,7 +37,7 @@
             <td><a ui-sref="workouts.show({ id: workout.id })">{{workout.title}}</a><a ng-click="destroy(workout)"><i class="material-icons">delete</i></a></td>
             <td>{{workout.category}}</td>
             <td>Created by: {{workout.user.username | uppercase }}</td>
-            <td><a ui-sref="addExercise({ id: workout.id })">Add Exercise(s)</a></td>
+            <!-- <td><a ui-sref="addExercise({ id: workout.id })">Add Exercise(s)</a></td> -->
           </tr>
         </tbody>
       </table>
